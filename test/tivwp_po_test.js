@@ -8,10 +8,17 @@ exports.tivwp_po = {
         done();
     },
     all  : function (test) {
-        test.expect(1);
+        var expected, actual;
 
-        var actual = grunt.file.read('tmp/test-ru_RU.po');
-        var expected = grunt.file.read('test/expected/test-ru_RU.po');
+        // Two assertions below.
+        test.expect(2);
+
+        actual = grunt.file.read('tmp/test-ru_RU.po');
+        expected = grunt.file.read('test/expected/test-ru_RU.po');
+        test.equal(actual, expected, 'Resulting PO file should be equal to the Expected.');
+
+        actual = grunt.file.read('tmp/test-de_DE.po');
+        expected = grunt.file.read('test/expected/test-de_DE.po');
         test.equal(actual, expected, 'Resulting PO file should be equal to the Expected.');
 
         test.done();

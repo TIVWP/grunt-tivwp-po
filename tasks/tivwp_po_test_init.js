@@ -15,6 +15,8 @@ module.exports = function (grunt) {
         grunt.log.writeln('File "' + 'tmp/test.pot' + '" created.');
         grunt.file.write('tmp/test-ru_RU.po', grunt.file.read('test/fixtures/test-ru_RU.po'));
         grunt.log.writeln('File "' + 'tmp/test-ru_RU.po' + '" created.');
+        grunt.file.write('tmp/test-de_DE.po', grunt.file.read('test/fixtures/test-de_DE.po'));
+        grunt.log.writeln('File "' + 'tmp/test-de_DE.po' + '" created.');
     });
 
 };
