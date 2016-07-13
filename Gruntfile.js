@@ -35,6 +35,9 @@ module.exports = function (grunt) {
         // Configuration to be run (and then tested).
         tivwp_po    : {
             all: {
+                options: {
+                    do_mo: true
+                },
                 files: [{
                     expand: true,
                     cwd   : 'tmp/',
