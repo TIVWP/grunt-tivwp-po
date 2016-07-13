@@ -36,12 +36,13 @@ module.exports = function (grunt) {
         tivwp_po    : {
             all: {
                 options: {
+                    pot_file: "tmp/test.pot",
                     do_mo: true
                 },
                 files: [{
                     expand: true,
-                    cwd   : 'tmp/',
-                    src   : ['*.po']
+                    cwd   : "tmp/",
+                    src   : ["*.po"]
                 }]
             }
         },
